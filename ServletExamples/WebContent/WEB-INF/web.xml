@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>ServletExamples</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>HeaderReaderServlet</display-name>
+    <servlet-name>HeaderReaderServlet</servlet-name>
+    <servlet-class>praveen.sankar.HeaderReaderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HeaderReaderServlet</servlet-name>
+    <url-pattern>/hrservlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Test</description>
+    <display-name>ReadInitParam</display-name>
+    <servlet-name>ReadInitParam</servlet-name>
+    <servlet-class>praveen.sankar.ReadInitParam</servlet-class>
+    <init-param>
+      <description>hello</description>
+      <param-name>Test</param-name>
+      <param-value>Test</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadInitParam</servlet-name>
+    <url-pattern>/rservlet</url-pattern>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+</web-app>
